@@ -7,7 +7,7 @@ int main(void)
     printf("Ingrese cadena: ");
     fflush(stdin);
     //gets(cadena);   es lo mismo que scanf
-    scanf("%[^\n]s", cadena);
+    scanf("%[^\n]s",cadena);
     printf("La cadena es %s \n", cadena);
 
     return (0);

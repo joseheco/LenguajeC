@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <ctype.h>
 
 int main (void)
 {
+int x = 0;    
 char nombre1[]="Mi nombre es Jose Herrera";
-char nombre2[]="Mi nombre es Zz";
+char nombre2[]="Mi nombre es Jose";
 
 printf("%s\n",nombre1);
 
@@ -33,7 +34,20 @@ printf("nombre1 es menor de caracteres a nombre2\n");
 }
 else
 {
-printf("Nombre2 es menor de caracteres a nombre12\n");
+printf("nombre2 es menor de caracteres a nombre1\n");
 }
+
+//Se cambiara en mayuscula segun el numero de caracteres que se ponga
+
+char mayus;
+mayus = toupper(nombre1[4]);
+printf ("Caracter es cambiado a mayusculas: %c\n", mayus);
+
+while(nombre1[x])
+{
+putchar (toupper(nombre1[x]));
+x++;
+}
+
 return (0);
 }

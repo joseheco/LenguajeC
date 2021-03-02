@@ -14,13 +14,15 @@ int main(void)
 {
 contact_L c1;
 
+///Se tuvo que cambiar scanf("%s",c1.name); por fgets(c1.name, 40, stdin); por que no se podia escribir dos lineas por separado en el nombre sin que salte al proximo printf, el mismo cambio se iso con c1.address.
+
 printf("Enter Name:");
 fflush(stdin);
-scanf("%[^\n]s",c1.name);
+fgets(c1.name, 40, stdin);
 
 printf("Enter Address:");
 fflush(stdin);
-scanf("%[^\n]s",c1.address);
+fgets(c1.address, 80, stdin);
 
 printf("Enter Age:");
 fflush(stdin);
